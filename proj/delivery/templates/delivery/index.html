@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&family=Montserrat:wght@300&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <div class='main'>
+
+        <h1 class="central-text">Заказы</h1>
+
+        {% for i in orders %}
+        <div class="order-border">
+            <h1 class="order">{{ i }}</h1>
+            <h1 class="order">Стоимость: {{ i.price }}</h1>
+
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
